@@ -1,9 +1,9 @@
 {
- "n_cases": 62,
+ "n_cases": 180,
  "by_type": {
   "T1": {
-   "n": 21,
-   "string_match_pct": 90.5,
+   "n": 50,
+   "string_match_pct": 90.0,
    "base": {
     "MATCH": 100.0,
     "NO_MATCH": 0.0,
@@ -16,8 +16,8 @@
    }
   },
   "T2": {
-   "n": 18,
-   "string_match_pct": 94.4,
+   "n": 50,
+   "string_match_pct": 94.0,
    "base": {
     "MATCH": 0.0,
     "NO_MATCH": 100.0,
@@ -30,8 +30,8 @@
    }
   },
   "T3": {
-   "n": 14,
-   "string_match_pct": 85.7,
+   "n": 50,
+   "string_match_pct": 90.0,
    "base": {
     "MATCH": 0.0,
     "NO_MATCH": 100.0,
@@ -44,7 +44,7 @@
    }
   },
   "T4": {
-   "n": 9,
+   "n": 30,
    "string_match_pct": 0.0,
    "base": {
     "MATCH": 0.0,
@@ -59,11 +59,11 @@
   }
  },
  "accuracy_pct": {
-  "base": 77.4,
+  "base": 72.2,
   "const": 100.0
  },
  "median_seconds": {
-  "base": 9.0,
-  "const": 8.9
+  "base": 7.9,
+  "const": 8.0
  }
 }

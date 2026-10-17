@@ -1,0 +1,77 @@
+{
+ "n_students": 20000,
+ "n_farmers": 20000,
+ "n_districts": 4,
+ "blocks_per_district": 10,
+ "villages_per_block": 10,
+ "colleges": [
+  30,
+  60
+ ],
+ "banks": [
+  15,
+  30
+ ],
+ "coops": [
+  20,
+  40
+ ],
+ "informal": [
+  30,
+  60
+ ],
+ "empanel_share": 0.25,
+ "vetting_catch": 0.5,
+ "p_student_enrolled": 0.7,
+ "p_switch": 0.05,
+ "p_bank": 0.6,
+ "p_coop": 0.35,
+ "p_informal": 0.25,
+ "p_misuse": 0.08,
+ "misuse_share": 0.3,
+ "p_colluding_payee": 0.03,
+ "p_kickback": 0.7,
+ "kickback_share": 0.5,
+ "p_refund_on_ledger": 0.5,
+ "p_ghost": 0.02,
+ "corrupt_officers": 2,
+ "officers_per_district": 5,
+ "skim_rate": 0.03,
+ "n_tamper": 20,
+ "p_id_fail": 0.03,
+ "p_emergency": 0.01,
+ "p_idle": 0.04,
+ "p_idle_late_genuine": 0.25,
+ "p_audit_conventional": 0.2,
+ "p_reconcile_conventional": 0.3,
+ "p_recover_conventional": 0.3,
+ "payee_flag_top": 0.05,
+ "p_audit_confirms_flag": 0.8,
+ "p_fraud_appeal": 0.5,
+ "p_appeal_overturn_fraud": 0.1,
+ "know": {
+  "A2": 0.5,
+  "B": 0.2,
+  "C": 1.0
+ },
+ "channel30": {
+  "A2": 0.25,
+  "B": 0.25,
+  "C": 0.8
+ },
+ "channel60": {
+  "A2": 0.4,
+  "B": 0.4,
+  "C": 1.0
+ },
+ "fix_unapproved_payee_A2": 0.2,
+ "fix_informal_lender": 0.3,
+ "fix_id": {
+  "A2": 0.6,
+  "B": 0.6,
+  "C": 0.95
+ },
+ "fix_emergency_C": 0.9,
+ "k_min": 10,
+ "idle_days": 90
+}

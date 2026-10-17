@@ -1,0 +1,220 @@
+{
+ "sdn_individuals": 7509,
+ "names_per_group": 64,
+ "groups": {
+  "Indic-origin (South Asian)": {
+   "0.8": {
+    "base_pct": 4.7,
+    "base_ci": [
+     1.6,
+     12.9
+    ],
+    "any_spelling_pct": 6.2,
+    "any_ci": [
+     2.5,
+     15.0
+    ],
+    "all_spellings_pct": 0.0,
+    "spelling_dependent_pct": 6.2,
+    "mean_spellings": 4.25
+   },
+   "0.85": {
+    "base_pct": 1.6,
+    "base_ci": [
+     0.3,
+     8.3
+    ],
+    "any_spelling_pct": 3.1,
+    "any_ci": [
+     0.9,
+     10.7
+    ],
+    "all_spellings_pct": 0.0,
+    "spelling_dependent_pct": 3.1,
+    "mean_spellings": 4.25
+   }
+  },
+  "Arabic-origin (common in South Asia and elsewhere)": {
+   "0.8": {
+    "base_pct": 37.5,
+    "base_ci": [
+     26.7,
+     49.7
+    ],
+    "any_spelling_pct": 59.4,
+    "any_ci": [
+     47.1,
+     70.5
+    ],
+    "all_spellings_pct": 3.1,
+    "spelling_dependent_pct": 56.2,
+    "mean_spellings": 5.91
+   },
+   "0.85": {
+    "base_pct": 12.5,
+    "base_ci": [
+     6.5,
+     22.8
+    ],
+    "any_spelling_pct": 21.9,
+    "any_ci": [
+     13.5,
+     33.4
+    ],
+    "all_spellings_pct": 0.0,
+    "spelling_dependent_pct": 21.9,
+    "mean_spellings": 5.91
+   }
+  },
+  "Anglo": {
+   "0.8": {
+    "base_pct": 1.6,
+    "base_ci": [
+     0.3,
+     8.3
+    ],
+    "any_spelling_pct": 1.6,
+    "any_ci": [
+     0.3,
+     8.3
+    ],
+    "all_spellings_pct": 0.0,
+    "spelling_dependent_pct": 1.6,
+    "mean_spellings": 4.0
+   },
+   "0.85": {
+    "base_pct": 0.0,
+    "base_ci": [
+     0.0,
+     5.7
+    ],
+    "any_spelling_pct": 0.0,
+    "any_ci": [
+     0.0,
+     5.7
+    ],
+    "all_spellings_pct": 0.0,
+    "spelling_dependent_pct": 0.0,
+    "mean_spellings": 4.0
+   }
+  },
+  "Hispanic": {
+   "0.8": {
+    "base_pct": 4.7,
+    "base_ci": [
+     1.6,
+     12.9
+    ],
+    "any_spelling_pct": 4.7,
+    "any_ci": [
+     1.6,
+     12.9
+    ],
+    "all_spellings_pct": 0.0,
+    "spelling_dependent_pct": 4.7,
+    "mean_spellings": 3.75
+   },
+   "0.85": {
+    "base_pct": 1.6,
+    "base_ci": [
+     0.3,
+     8.3
+    ],
+    "any_spelling_pct": 1.6,
+    "any_ci": [
+     0.3,
+     8.3
+    ],
+    "all_spellings_pct": 0.0,
+    "spelling_dependent_pct": 1.6,
+    "mean_spellings": 3.75
+   }
+  },
+  "Russian (transliterated)": {
+   "0.8": {
+    "base_pct": 18.8,
+    "base_ci": [
+     11.1,
+     30.0
+    ],
+    "any_spelling_pct": 29.7,
+    "any_ci": [
+     19.9,
+     41.8
+    ],
+    "all_spellings_pct": 1.6,
+    "spelling_dependent_pct": 28.1,
+    "mean_spellings": 4.0
+   },
+   "0.85": {
+    "base_pct": 3.1,
+    "base_ci": [
+     0.9,
+     10.7
+    ],
+    "any_spelling_pct": 4.7,
+    "any_ci": [
+     1.6,
+     12.9
+    ],
+    "all_spellings_pct": 0.0,
+    "spelling_dependent_pct": 4.7,
+    "mean_spellings": 4.0
+   }
+  },
+  "Chinese (pinyin)": {
+   "0.8": {
+    "base_pct": 65.6,
+    "base_ci": [
+     53.4,
+     76.1
+    ],
+    "any_spelling_pct": 71.9,
+    "any_ci": [
+     59.9,
+     81.4
+    ],
+    "all_spellings_pct": 3.1,
+    "spelling_dependent_pct": 68.8,
+    "mean_spellings": 4.0
+   },
+   "0.85": {
+    "base_pct": 25.0,
+    "base_ci": [
+     16.0,
+     36.8
+    ],
+    "any_spelling_pct": 28.1,
+    "any_ci": [
+     18.6,
+     40.1
+    ],
+    "all_spellings_pct": 0.0,
+    "spelling_dependent_pct": 28.1,
+    "mean_spellings": 4.0
+   }
+  }
+ },
+ "fisher_vs_anglo_at_0.8": {
+  "Indic-origin (South Asian)": {
+   "base_p": 0.619023622047244,
+   "any_p": 0.36503937007874016
+  },
+  "Arabic-origin (common in South Asia and elsewhere)": {
+   "base_p": 1.30992974620174e-07,
+   "any_p": 6.793696407135038e-14
+  },
+  "Hispanic": {
+   "base_p": 0.619023622047244,
+   "any_p": 0.619023622047244
+  },
+  "Russian (transliterated)": {
+   "base_p": 0.0021097473680534947,
+   "any_p": 9.655822605087397e-06
+  },
+  "Chinese (pinyin)": {
+   "base_p": 4.575405202639443e-16,
+   "any_p": 1.803131682111278e-18
+  }
+ }
+}

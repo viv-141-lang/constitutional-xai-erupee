@@ -1,58 +1,61 @@
-"""Figure 2: Conceptual framework - 4T-A accountability loop inside data-governance and model-risk layers."""
+"""Figure 2: Conceptual framework - 4T-A accountability loop inside data-governance and model-risk layers.
+Drawn in inch coordinates at 7.2 in wide so that, at the 6.5 in text width, the smallest text prints at about 7.8 pt."""
 import pathlib
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch, Circle
 
 OUT = pathlib.Path(__file__).resolve().parent.parent / "06_Figures"
-NAVY, TEAL, SAND, GREY, INK = "#1F3A5F", "#2A7F62", "#F3EFE6", "#E6EBF0", "#222222"
+NAVY, TEAL, SAND, GREY, INK, RED = "#1F3A5F", "#2A7F62", "#F3EFE6", "#E6EBF0", "#222222", "#8C2D19"
+plt.rcParams.update({"font.family": "serif", "font.serif": ["Times New Roman", "DejaVu Serif"]})
+W, H = 7.2, 5.9
+fig, ax = plt.subplots(figsize=(W, H), dpi=300)
+ax.set_xlim(0, W); ax.set_ylim(0, H); ax.axis("off"); fig.subplots_adjust(0, 0, 1, 1)
 
-fig, ax = plt.subplots(figsize=(10, 7.4), dpi=300)
-ax.set_xlim(0, 10); ax.set_ylim(0, 7.4); ax.axis("off")
 
-def box(x, y, w, h, fc, ec, lw=1.2, ls="-", r=0.25):
-    ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle=f"round,pad=0,rounding_size={r}",
-                                fc=fc, ec=ec, lw=lw, ls=ls))
+def box(x, y, w, h, fc, ec, lw=1.2, r=0.18):
+    ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle=f"round,pad=0,rounding_size={r}", fc=fc, ec=ec, lw=lw))
+
 
 # outer obligations
-box(0.15, 0.15, 9.7, 7.1, "white", INK, 1.4)
-ax.text(2.6, 6.95, "LEGAL CONSTITUTION", ha="center", fontsize=10, weight="bold", color=NAVY)
-ax.text(2.6, 6.62, "Puttaswamy proportionality · DPDP Act 2023\nGDPR Art. 22 · EU AI Act Art. 86", ha="center", va="top", fontsize=7.6, color=NAVY)
-ax.text(7.4, 6.95, "SECURITY MANDATE", ha="center", fontsize=10, weight="bold", color="#8C2D19")
-ax.text(7.4, 6.62, "PMLA 2002 · FIU-IND / ED\nFATF Recommendation 16", ha="center", va="top", fontsize=7.6, color="#8C2D19")
-ax.annotate("", xy=(5.55, 6.78), xytext=(4.45, 6.78), arrowprops=dict(arrowstyle="<->", color="#9A9A9A", lw=1.2))
-ax.text(5.0, 6.88, "tension", ha="center", fontsize=7, style="italic", color="#666")
+box(0.05, 0.05, W - 0.1, H - 0.1, "white", INK, 1.4)
+ax.text(1.85, 5.5, "LEGAL CONSTITUTION", ha="center", fontsize=10.5, weight="bold", color=NAVY)
+ax.text(1.85, 5.3, "Puttaswamy proportionality ·\nDPDP Act 2023 · GDPR Art. 22 ·\nEU AI Act Art. 86",
+        ha="center", va="top", fontsize=9.2, color=NAVY, linespacing=1.15)
+ax.text(5.35, 5.5, "SECURITY MANDATE", ha="center", fontsize=10.5, weight="bold", color=RED)
+ax.text(5.35, 5.3, "PMLA 2002 · FIU-IND / ED\nFATF Recommendation 16", ha="center", va="top", fontsize=9.2, color=RED, linespacing=1.15)
+ax.annotate("", xy=(4.05, 5.25), xytext=(3.15, 5.25), arrowprops=dict(arrowstyle="<->", color="#8A8A8A", lw=1.2))
+ax.text(3.6, 5.35, "tension", ha="center", fontsize=9.2, style="italic", color="#555")
 
 # governance layers
-box(0.75, 0.55, 8.5, 5.55, GREY, "#7A8899", 1.0)
-ax.text(5.0, 5.8, "MODEL-RISK MANAGEMENT  ·  validation · effective challenge · monitoring", ha="center", fontsize=8.4, weight="bold", color="#4A5868")
-box(1.4, 0.95, 7.2, 4.6, SAND, "#B8A98A", 1.0)
-ax.text(5.0, 5.22, "DATA GOVERNANCE  ·  principles · quality · metadata/lineage · access · life cycle", ha="center", fontsize=8.4, weight="bold", color="#7A6A48")
+box(0.3, 0.5, W - 0.6, 4.05, GREY, "#7A8899", 1.0, r=0.2)
+ax.text(W / 2, 4.3, "MODEL-RISK MANAGEMENT  ·  validation · effective challenge · monitoring",
+        ha="center", fontsize=9.2, weight="bold", color="#3F4D5C")
+box(0.6, 0.68, W - 1.2, 3.5, SAND, "#B8A98A", 1.0, r=0.2)
+ax.text(W / 2, 3.93, "DATA GOVERNANCE  ·  principles · quality · metadata / lineage · access · life cycle",
+        ha="center", fontsize=9.2, weight="bold", color="#6A5A38")
 
 # accountability loop
-cx, cy, R = 5.0, 3.05, 1.45
-ax.add_patch(Circle((cx, cy), 0.86, fc="white", ec=INK, lw=1.2))
-ax.text(cx, cy, "Automated\nhold / freeze on a\ncross-border\ne₹ payment", ha="center", va="center", fontsize=8.2, color=INK, weight="bold")
-nodes = [  # (angle-position, verb, principle)
-    ((cx, cy + R + 0.32), "TRACE", "Traceability"),
-    ((cx + R + 1.05, cy), "EXPLAIN", "Transparency"),
-    ((cx, cy - R - 0.32), "CONTEST", "Trust (human in the loop)"),
-    ((cx - R - 1.05, cy), "CORRECT", "Accountability"),
-]
+cx, cy = W / 2, 2.25
+ax.add_patch(Circle((cx, cy), 0.66, fc="white", ec=INK, lw=1.2))
+ax.text(cx, cy, "Automated\nhold or freeze\non a cross-\nborder e₹\npayment", ha="center", va="center",
+        fontsize=9.2, color=INK, weight="bold", linespacing=1.1)
+BW, BH = 1.5, 0.62
+nodes = [((cx, 3.33), "TRACE", "Traceability"),
+         ((cx + 1.85, cy), "EXPLAIN", "Transparency"),
+         ((cx, 1.13), "CONTEST", "Trust (human in the loop)"),
+         ((cx - 1.85, cy), "CORRECT", "Accountability")]
 for (x, y), verb, pr in nodes:
-    box(x - 0.95, y - 0.33, 1.9, 0.66, NAVY if verb != "CONTEST" else TEAL, "white", 0.8, r=0.18)
-    ax.text(x, y + 0.08, verb, ha="center", va="center", fontsize=9.5, color="white", weight="bold")
-    ax.text(x, y - 0.17, pr, ha="center", va="center", fontsize=7, color="white")
-pts = [(n[0][0], n[0][1]) for n in nodes]
-offs = [((0.95, -0.15), (-0.2, 0.33)), ((-0.2, -0.33), (0.95, 0.15)), ((-0.95, 0.15), (0.2, -0.33)), ((0.2, 0.33), (-0.95, -0.15))]
-for i in range(4):
-    (x1, y1), (x2, y2) = pts[i], pts[(i + 1) % 4]
-    (a, b), (c, d) = offs[i]
-    ax.add_patch(FancyArrowPatch((x1 + a, y1 + b), (x2 + c, y2 + d), connectionstyle="arc3,rad=-0.32",
-                                 arrowstyle="-|>", mutation_scale=13, lw=1.4, color=INK))
+    box(x - BW / 2, y - BH / 2, BW, BH, TEAL if verb == "CONTEST" else NAVY, "white", 0.8, r=0.12)
+    ax.text(x, y + 0.1, verb, ha="center", va="center", fontsize=10, color="white", weight="bold")
+    ax.text(x, y - 0.15, pr, ha="center", va="center", fontsize=9.2, color="white")
+(tx, ty), (ex, ey), (kx, ky), (rx, ry) = [n[0] for n in nodes]
+links = [((tx + BW / 2, ty), (ex, ey + BH / 2)), ((ex, ey - BH / 2), (kx + BW / 2, ky)),
+         ((kx - BW / 2, ky), (rx, ry - BH / 2)), ((rx, ry + BH / 2), (tx - BW / 2, ty))]
+for p, q in links:
+    ax.add_patch(FancyArrowPatch(p, q, connectionstyle="arc3,rad=-0.3", arrowstyle="-|>", mutation_scale=13, lw=1.4, color=INK))
 
-ax.text(5.0, 0.32, "4T-A principle: every automated intervention must be traced, explained, contestable and correctable",
-        ha="center", fontsize=8, style="italic", color="#333")
-fig.tight_layout()
+ax.text(W / 2, 0.22, "4T-A principle: every automated intervention must be traced, explained, contestable and correctable",
+        ha="center", fontsize=9.2, style="italic", color="#333")
 for ext in ("png", "svg"):
-    fig.savefig(OUT / f"Fig02_Conceptual_Framework.{ext}", bbox_inches="tight", facecolor="white")
+    fig.savefig(OUT / f"Fig02_Conceptual_Framework.{ext}", bbox_inches="tight", pad_inches=0.03, facecolor="white")
 print("saved")

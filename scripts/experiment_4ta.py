@@ -65,7 +65,7 @@ def generate(n: int) -> pd.DataFrame:
     sg = {k: (seg == k) for k in ["trader", "traveller", "new_account"]}
     d["log_amount"] = rng.normal(10.3, 1.1, n)
     d.loc[is_["layering"], "log_amount"] = rng.normal(11.0, 1.0, is_["layering"].sum())
-    nm = rng.beta(1.3, 10, n) + translit * rng.beta(2, 6, n) * 0.6        # bias assumption (DATA_ASSUMPTIONS)
+    nm = rng.beta(1.3, 10, n) + translit * rng.beta(2, 6, n) * DATA_ASSUMPTIONS.get("bias_scale", 0.6)  # bias assumption
     nm[is_["sanctioned"]] = rng.beta(5, 3, is_["sanctioned"].sum())
     d["name_match"] = np.clip(nm, 0, 1)
     d["second_id_match"] = 0
