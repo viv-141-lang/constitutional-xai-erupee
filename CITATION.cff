@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below."
+title: "Constitutional XAI for Cross-Border e-Rupee Payments: Code and Data"
+type: software
+authors:
+  - given-names: Vivek
+    affiliation: "CHRIST (Deemed to be University)"
+date-released: 2026-10-17
+version: 0.1.0
+license: MIT
+keywords:
+  - central bank digital currency
+  - explainable artificial intelligence
+  - constitutional AI
+  - anti-money laundering
+  - cross-border payments
+  - digital rupee

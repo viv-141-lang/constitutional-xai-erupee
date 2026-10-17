@@ -1,0 +1,13 @@
+{
+ "local_fan_out_seen_by_each_institution": {
+  "Bank A (India)": 4,
+  "Bank B (India)": 4,
+  "PSP C (EU)": 4
+ },
+ "pooled_fan_out_on_shared_network": 12,
+ "R4_layer_fanout_threshold": 6,
+ "detected_locally": false,
+ "detected_on_shared_network": true,
+ "shared_fields": "salted SHA-256 pseudonym of counterparty, timestamp bucket, amount band; no names or account numbers",
+ "source_pseudonym": "c3cbc7c8"
+}

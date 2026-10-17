@@ -1,0 +1,42 @@
+{
+ "sdn_individuals": 7509,
+ "runtime_s": 35.7,
+ "by_threshold": {
+  "0.8": {
+   "South Asian-transliterated": {
+    "names": 80,
+    "hit_rate_base_pct": 11.2,
+    "hit_rate_any_variant_pct": 26.2,
+    "outcome_depends_on_spelling_pct": 26.2
+   },
+   "Anglo": {
+    "names": 80,
+    "hit_rate_base_pct": 1.2
+   }
+  },
+  "0.85": {
+   "South Asian-transliterated": {
+    "names": 80,
+    "hit_rate_base_pct": 2.5,
+    "hit_rate_any_variant_pct": 12.5,
+    "outcome_depends_on_spelling_pct": 12.5
+   },
+   "Anglo": {
+    "names": 80,
+    "hit_rate_base_pct": 0.0
+   }
+  },
+  "0.9": {
+   "South Asian-transliterated": {
+    "names": 80,
+    "hit_rate_base_pct": 0.0,
+    "hit_rate_any_variant_pct": 2.5,
+    "outcome_depends_on_spelling_pct": 2.5
+   },
+   "Anglo": {
+    "names": 80,
+    "hit_rate_base_pct": 0.0
+   }
+  }
+ }
+}

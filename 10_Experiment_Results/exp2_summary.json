@@ -1,0 +1,69 @@
+{
+ "n_cases": 62,
+ "by_type": {
+  "T1": {
+   "n": 21,
+   "string_match_pct": 90.5,
+   "base": {
+    "MATCH": 100.0,
+    "NO_MATCH": 0.0,
+    "NEED_MORE_INFO": 0.0
+   },
+   "const": {
+    "MATCH": 100.0,
+    "NO_MATCH": 0.0,
+    "NEED_MORE_INFO": 0.0
+   }
+  },
+  "T2": {
+   "n": 18,
+   "string_match_pct": 94.4,
+   "base": {
+    "MATCH": 0.0,
+    "NO_MATCH": 100.0,
+    "NEED_MORE_INFO": 0.0
+   },
+   "const": {
+    "MATCH": 0.0,
+    "NO_MATCH": 100.0,
+    "NEED_MORE_INFO": 0.0
+   }
+  },
+  "T3": {
+   "n": 14,
+   "string_match_pct": 85.7,
+   "base": {
+    "MATCH": 0.0,
+    "NO_MATCH": 100.0,
+    "NEED_MORE_INFO": 0.0
+   },
+   "const": {
+    "MATCH": 0.0,
+    "NO_MATCH": 0.0,
+    "NEED_MORE_INFO": 100.0
+   }
+  },
+  "T4": {
+   "n": 9,
+   "string_match_pct": 0.0,
+   "base": {
+    "MATCH": 0.0,
+    "NO_MATCH": 100.0,
+    "NEED_MORE_INFO": 0.0
+   },
+   "const": {
+    "MATCH": 0.0,
+    "NO_MATCH": 100.0,
+    "NEED_MORE_INFO": 0.0
+   }
+  }
+ },
+ "accuracy_pct": {
+  "base": 77.4,
+  "const": 100.0
+ },
+ "median_seconds": {
+  "base": 9.0,
+  "const": 8.9
+ }
+}

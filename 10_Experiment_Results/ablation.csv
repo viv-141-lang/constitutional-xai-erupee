@@ -1,0 +1,5 @@
+policy,wrongful_freezes_per_10k,wrongful_freezes_translit_per_10k,wrongful_freezes_other_per_10k,illicit_stopped_pct,illicit_stopped_or_monitored_pct,legit_monitored_per_10k
+Black box (freeze on score),129.5,146.2,105.2,85.2,85.2,0.0
++ R4 security override,129.5,146.2,105.2,85.2,85.2,0.0
++ R1 no hold on name alone,113.9,120.0,105.2,85.2,85.2,0.0
++ R2 proportionality (full constitution),46.1,48.0,43.4,65.6,85.2,67.8

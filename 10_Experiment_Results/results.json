@@ -1,0 +1,112 @@
+{
+ "model_auc": 0.9839,
+ "n_test": 15000,
+ "n_legit_test": 14744,
+ "n_illicit_test": 256,
+ "wrongful_freezes_per_10k_legit": {
+  "black_box": 129.5,
+  "constitutional": 46.1
+ },
+ "wrongful_freezes_per_10k_transliterated": {
+  "black_box": 146.2,
+  "constitutional": 48.0
+ },
+ "wrongful_freezes_per_10k_other_names": {
+  "black_box": 105.2,
+  "constitutional": 43.4
+ },
+ "legit_sent_to_verify_per_10k": 15.6,
+ "legit_release_monitor_per_10k": 67.8,
+ "illicit_stopped_pct": {
+  "black_box": 85.2,
+  "constitutional": 65.6
+ },
+ "illicit_stopped_pct_by_kind": {
+  "sanctioned": {
+   "black_box": 85.1,
+   "constitutional": 79.1
+  },
+  "layering": {
+   "black_box": 83.9,
+   "constitutional": 53.6
+  },
+  "cyber": {
+   "black_box": 87.0,
+   "constitutional": 71.4
+  }
+ },
+ "black_box_legit_holds_driven_mainly_by_name_match": 27,
+ "black_box_legit_holds": 191,
+ "explanation_coverage_of_freezes_pct": {
+  "black_box": 0.0,
+  "constitutional": 100.0
+ },
+ "counterfactual_or_review_coverage_pct": 100.0,
+ "counterfactual_available_pct": {
+  "wrongly_frozen_legit": 95.6,
+  "frozen_illicit": 31.2,
+  "n_legit": 68,
+  "n_illicit": 157
+ },
+ "tau_alert": 0.0824,
+ "alert_precision_black_box_pct": 53.3,
+ "legit_frozen_by_segment_per_10k": {
+  "ordinary": {
+   "black_box": 56.0,
+   "constitutional": 11.5
+  },
+  "trader": {
+   "black_box": 802.1,
+   "constitutional": 347.6
+  },
+  "traveller": {
+   "black_box": 269.2,
+   "constitutional": 121.1
+  },
+  "new_account": {
+   "black_box": 174.3,
+   "constitutional": 80.4
+  }
+ },
+ "fiu_alerts": 19,
+ "latency_ms_examined": {
+  "n": 409,
+  "median": 36.0,
+  "p95": 47.8,
+  "max": 58.5
+ },
+ "decision_counts": {
+  "RELEASE": 14591,
+  "RELEASE+MONITOR": 150,
+  "HOLD": 126,
+  "HOLD+HUMAN_REVIEW": 80,
+  "VERIFY": 34,
+  "HOLD+FIU_ALERT": 19
+ },
+ "audit_records": 409,
+ "audit_chain_head": "a41d3b9f160b7f9bc3f8e08f3006636a2a0a1000e15cc3364383ca15245376ff",
+ "constitution": {
+  "alert_rate": 0.025,
+  "tau_alert": 0.08239184060978891,
+  "name_screen": 0.7,
+  "R1_name_share": 0.5,
+  "R2_small_value_inr": 50000,
+  "R2_max_score": 0.8,
+  "R4_cyber_device": 0.7,
+  "R4_cyber_velocity": 10,
+  "R4_layer_fanout": 6,
+  "R4_layer_age": 60,
+  "R4_layer_score": 0.9
+ },
+ "data_assumptions": {
+  "n_payments": 60000,
+  "share_transliterated_names": 0.6,
+  "prevalence": {
+   "sanctioned": 0.004,
+   "layering": 0.008,
+   "cyber_compromise": 0.005
+  },
+  "segments": "legit = ordinary 82%, small traders 8%, travellers on new devices 5%, new accounts 5%",
+  "bias_assumption": "Transliterated Indian names receive a higher spurious sanctions name-match score (Beta(2,6)*0.6 added), reflecting name-similarity screening (NGP, n.d.)."
+ }
+}

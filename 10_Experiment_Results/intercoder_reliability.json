@@ -1,0 +1,20 @@
+{
+ "cells": 45,
+ "exact_agreement_pct": 75.6,
+ "cohen_kappa": 0.6,
+ "quadratic_weighted_kappa": 0.829,
+ "agreement_on_requires_vs_not_pct": 93.3,
+ "disagreements": [
+  "D1-A1: coder1=2 coder2=1",
+  "D2-A2: coder1=0 coder2=1",
+  "D3-A4: coder1=0 coder2=1",
+  "D5-A3: coder1=0 coder2=1",
+  "D5-A4: coder1=0 coder2=1",
+  "D6-A2: coder1=1 coder2=0",
+  "D6-A4: coder1=2 coder2=1",
+  "D7-A2: coder1=1 coder2=0",
+  "D9-A2: coder1=0 coder2=1",
+  "D9-A4: coder1=0 coder2=1",
+  "D9-A5: coder1=1 coder2=2"
+ ]
+}
