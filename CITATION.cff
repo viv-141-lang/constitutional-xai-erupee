@@ -8,6 +8,7 @@ authors:
 date-released: 2026-10-17
 version: 0.1.0
 license: MIT
+repository-code: "https://github.com/viv-141-lang/constitutional-xai-erupee"
 keywords:
   - central bank digital currency
   - explainable artificial intelligence

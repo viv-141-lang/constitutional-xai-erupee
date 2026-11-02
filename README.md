@@ -7,6 +7,17 @@ Replication package for the working paper:
 
 The paper argues that when artificial intelligence screens programmable central bank digital currency (CBDC) payments, every automated hold or freeze must be **traced, explained, contestable and correctable** (the *4T-A principle*: Transparency, Traceability, Trust, Accountability). It implements this as a three-tier architecture: purpose-bound welfare rules at the domestic edge (Tier 1), a neuro-symbolic core in which a learned risk model proposes and a small machine-readable constitution decides (Tier 2), and cross-border attestations that share conclusions rather than personal data (Tier 3).
 
+## At a glance
+
+- **Problem:** when AI screens programmable CBDC payments, a legitimate person can be frozen with no way to see why or to contest it.
+- **Idea:** a learned risk model proposes, and a small machine-readable "constitution" decides and must give reasons. Every decision goes into a hash-chained audit log.
+- **Result on synthetic data:** wrongful freezes fall from 129.5 to 46.1 per 10,000 payments, with 85.2% of illicit payments still frozen or monitored. Median 36 ms per decision.
+- **Scope:** these results show mechanism and feasibility on synthetic data, not field performance (see the caveats below).
+
+![The three-tier architecture: welfare rules at the edge, a neuro-symbolic core, and cross-border attestations](06_Figures/Fig05_Three_Tier_Architecture.png)
+
+*Paper Figure 7: the three-tier architecture.*
+
 ## What is in this repository
 
 | Folder | Contents |
